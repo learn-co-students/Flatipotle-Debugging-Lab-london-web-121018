@@ -16,7 +16,8 @@ class Form extends Component {
     ...DEFAULT_STATE
   }
 
-  handleSubmit() {
+  handleSubmit = (event) => {
+    // debugger
     event.preventDefault()
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
@@ -26,7 +27,8 @@ class Form extends Component {
     })
   }
 
-  handleChange() {
+  handleChange = (event) => {
+    // debugger
     const itemType = event.target.name
     const item = event.target.value
 
