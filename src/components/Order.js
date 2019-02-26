@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Side from './Side.js'
 
 class Order extends Component {
   state = {
@@ -6,7 +7,11 @@ class Order extends Component {
   }
 
   handleClick = () => {
-    this.state.isClicked = !this.state.isClicked
+    this.state.setState(prevState => {
+      return {
+        isClicked: !prevState.isClicked
+      }
+    })
   }
 
   render() {
@@ -44,4 +49,4 @@ class Order extends Component {
   }
 }
 
-export default Order
+export default Order;
