@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import './App.css'
-import Form from './Form'
-import Order from './Order'
+import Form from './components/Form'
+import Order from './components/Order'
 
 class App extends Component {
-  state: {
+
+  state = { 
     orders: []
   }
 
@@ -16,7 +17,7 @@ class App extends Component {
 
   render() {
     const orders = this.state.orders.map( (order, idx) => {
-      <Order key={idx} {...order} />
+  <Order key={idx} {...order} />
     })
 
     return (
@@ -37,5 +38,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App
